@@ -1,0 +1,63 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Hide the actual checkbox, the checkbox is styled
+ * by the OS so we can't really redesign it properly,
+ * do not use display: none which will make it
+ * inaccesible to screen readers */
+.checkbox input {
+  opacity: 0;
+}
+
+/* The wrapping div has position relative so we can 
+ * use it to position our label above our checkbox */
+.checkbox {
+  position: relative;
+  min-height: 2rem;
+  margin: 0.5rem 0;
+}
+
+.checkbox input + label {
+  margin-left: 1rem;
+}
+
+/* The input-box is also positioned absolute at the 
+ * same location but behind the label. z-index: 0 */
+.checkbox input + label::before {
+  content: "";
+  height: 2rem;
+  width: 2rem;
+  position: absolute;
+  border: 1px solid #2d2d2d;
+  top: 0;
+  left: 0;
+}
+
+/* If the input is checked/true, style the 
+ * label that represents the checkbox */
+.checkbox input:checked + label::before {
+  background-color: #2d2d2d;
+}
+
+/* Also rememeber to style it so it is clear
+ * to the user that it is selected. This outline
+ * color is the default color */
+.checkbox input:focus + label::before {
+  outline: rgb(59, 153, 252) auto 5px;
+}
+
+/* Read more: 
+ * https://medium.com/claritydesignsystem/pure-css-accessible-checkboxes-and-radios-buttons-54063e759bb3
+ */

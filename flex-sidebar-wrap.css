@@ -1,0 +1,64 @@
+body{
+  /* Use default sans-serif font */
+  font-family: "Helvetica Neue", sans-serif;
+  color: #444;
+  width:100%;
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  /* Make the box model behave */
+  box-sizing: border-box;
+}
+
+.parent{
+  padding: 3rem 1rem;
+  width: 90%; /* make some margins on the sides */
+  margin: 1rem auto; /* auto margins left and right */
+  height: 100vh; /* whole viewport */
+  background-color: lightsalmon;
+  display: flex;
+  flex-direction: column;
+}
+
+
+header, footer, section{
+  background-color: white;
+  margin: 1rem;
+  padding: 1rem;
+}
+
+header{
+  height: 150px;
+}
+
+section{
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+article{
+  flex-basis: 200px; /* basis is the width/height */
+  /* how much we can deviate from that basis */
+  flex-grow: 3; 
+  /* we can't shrink below 200px, but grow beyond 200px */
+  flex-shrink: 0;
+  
+  flex: 3 0 200px; /* same as above */
+  background-color: red;
+}
+
+aside{
+  flex-basis: 100px;
+  flex-grow: 1;
+  flex-shrink: 0;
+  flex: 1 0 100px;
+  background-color: green
+}
+
+footer{
+  height: 100px;
+}

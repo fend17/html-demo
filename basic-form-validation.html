@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="basic-form-validation.css">
+  <title>Basic HTML5 Form Validation</title>
+</head>
+
+<body>
+
+  <section>
+    <h1>Login</h1>
+    <form>
+      <!-- Always use a label, the for attribute
+           is connected to the id of the input,
+           required won't let us submit the form
+           if the element is empty -->
+      <label for="username">Username</label>
+      <input  type="text" 
+              name="username" 
+              id="username" 
+              required>
+      <label for="password">Password</label>
+      <!-- pattern is regex letting us use specific
+           criterias to pass the validation -->
+      <input  type="password" 
+              name="password" 
+              id="password" 
+              placeholder="1 uppercase, min 8 chars" 
+              required 
+              pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$">
+      <input type="submit" value="Login">
+    </form>
+  </section>
+
+  <script>
+    /* Script to prevent the form from submitting and
+     * reloading the page */
+    document.querySelector('form')
+      .addEventListener('submit', (e) => {
+        e.preventDefault();
+      })
+  </script>
+</body>
+
+</html>

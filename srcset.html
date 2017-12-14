@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>My trip to the moon</title>
+	<link rel="stylesheet" href="srcset.css">
+	<link rel="icon" href="favicon.png">
+</head>
+
+<body>
+	<header>
+		<img src="media/wallace.gif" alt="A animated picture of Wallace & Gromit on the moon">
+	</header>
+	<div class="container">
+		<img src="media/apollo1_1000w.jpg" 
+			srcset="
+			media/apollo1_3000w.jpg 3000w,
+			media/apollo1_2000w.jpg 2000w,
+			media/apollo1_1000w.jpg 1000w,
+			media/apollo1_500w.jpg 500w,
+			media/apollo1_250w.jpg 250w"
+			alt="A picture of me planting the american flag on the moon.">
+		
+		
+			<img src="media/apollo2_1000w.jpg" 
+			srcset="
+				media/apollo2_3000w.jpg 3000w,
+				media/apollo2_2000w.jpg 2000w,
+				media/apollo2_1000w.jpg 1000w,
+				media/apollo2_500w.jpg 500w,
+				media/apollo2_250w.jpg 250w"
+				sizes="(min-width: 40em) 33.3vw, 100vw"
+				alt="A picture of my badass ride on the moon.">
+	</div>
+	<script>
+		/* For logging which image is selected by srcset */
+		const images = document.getElementsByTagName("img");
+		for (let i = 0; i < images.length; i++) {
+			images[i].onload = function() {
+				console.log(`Image width: ${this.currentSrc}`);
+			};
+		};
+	</script>
+</body>
+
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="accessible-table.css">
+  <title>Accessible table</title>
+</head>
+
+<body>
+  <table>
+    <!-- Title of table inside of caption -->
+    <caption>A table of nice fruits</caption>
+    <!-- thead and tbody is optional markup, default is tbody -->
+    <thead>
+      <tr>
+        <!-- scope defines if th is set for column or for the header
+                 because we can have headings in both row and column -->
+        <th scope="col">Fruit</th>
+        <th scope="col">Origin </th>
+        <th scope="col">Color</th>
+        <th scope="col">Taste</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <!-- the heading for the row is the acutal fruit 
+                 the rest are td for the fruit, here we can specify
+                 that this th is set for the whole row -->
+        <th scope="row">Banana</th>
+        <td>Southeast Asia </td>
+        <td>Yellow</td>
+        <td>Banany</td>
+      </tr>
+      <tr>
+        <th scope="row">Apple</th>
+        <td>Central Asia</td>
+        <td>Red/green</td>
+        <td>Sour</td>
+      </tr>
+      <tr>
+        <th scope="row">Peach</th>
+        <td>Northwest China</td>
+        <td>Peachy</td>
+        <td>Sweet</td>
+      </tr>
+      <tr>
+        <th scope="row">Kumquat</th>
+        <td>South Asia</td>
+        <td>Orange</td>
+        <td>Sour</td>
+      </tr>
+    </tbody>
+  </table>
+</body>
+
+</html>

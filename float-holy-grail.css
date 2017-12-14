@@ -1,0 +1,35 @@
+body{
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  text-align: center;
+  color: #444;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+aside, main{
+  float: left;
+  /* Cheating with a set height*/
+  height: 500px;
+}
+
+aside{
+  background: lightgoldenrodyellow;
+  width: 20%;
+}
+
+main{
+  background: lightseagreen;
+  width: 60%;
+}
+
+header, footer{
+  height: 100px;
+  width: 100%;
+  background-color: lightcoral;
+  padding: 1rem;
+}
+

@@ -1,0 +1,55 @@
+body{
+  /* Use default sans-serif font */
+  font-family: "Helvetica Neue", sans-serif;
+  color: #444;
+  margin: 0;
+  padding: 0;
+  width:100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+* {
+  /* Make the box model behave */
+  box-sizing: border-box;
+}
+
+.wrapper{
+  display: flex;
+  flex: 1;
+  flex-wrap: wrap;
+}
+
+header{
+  height: 8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main{
+  flex: 1 0 300px;
+  padding: 1rem;
+}
+
+nav, aside {
+  color: white;
+  flex: 1 0 10rem;
+  background-color: teal;
+  display: flex;
+  padding: 1rem 0 0 1rem;
+}
+
+nav{
+  flex-direction: column;
+  align-items: center;
+}
+
+footer{
+  height: 4rem;
+  display: flex;
+  justify-content: center;
+  align-items:center;
+  background-color: lightcoral;
+}

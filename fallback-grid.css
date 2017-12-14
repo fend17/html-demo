@@ -1,0 +1,108 @@
+body , html {
+  /* IE-fix to horizontal align the .grid-element */
+  text-align:center;
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  /* may be needed to make body take up 100% of html element */
+  min-height: 100%;
+}
+
+/* Make box model include border and auto set the content box */
+* {
+  box-sizing: border-box;
+}
+
+.grid {
+    /* We must have a width for auto margins to work */
+    width: 80%;
+    /* auto margin on the sides, 0 margin on the top and bottom */
+    margin: 0 auto;
+    /* text-align: left together with text-align:center on the parent centers the element */
+    text-align: left;
+}
+
+/* clearfix to stop elements from floating on */
+.grid::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+  
+.cell {
+    /* Default is float, works on every browser */
+    float: left;
+    /* calc is not recognized by IE5, use a fallback width */
+    width: 48%;
+    /* remove the margins (16px) from the total width */
+    width: calc(50% - 16px);
+    height: 160px;
+    /* set a minimum width so cell will wrap to new row */
+    min-width: 200px;
+    /* rem is not recognized in IE5, use pixels */
+    margin: 0 16px 16px 0;
+    background-color: thistle;
+}
+
+/* removes the right margins on the right div, we only want the margin between the two cells */
+.cell:nth-child(even) {
+    margin-right: 0;
+}
+
+/* If flex is supported, use it */
+@supports(display: flex) {
+  .grid{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .cell {
+     /* Make div take up half the space, no grow or shrink,
+      * margin already set earlier */
+     flex: 0 0 calc(50% - 1rem);
+   }
+}
+
+/* If grid is supported, use it */
+@supports (display: grid) {
+  .grid {
+     display: grid;
+     /* defined two columns, min-width: 200px, max-width: 1 fraction */
+     grid-template-columns: repeat(2, minmax(200px, 1fr));
+     /* Place rest of divs on new rows, min-height: 10rem, max-height: auto */
+     grid-auto-rows: minmax(10rem, auto);
+     /* gutters between cells are 1 rem, instead of margins */
+     grid-gap: 1rem 1rem;
+  }
+  .cell {
+     /* remove height and width set by our earlier floating arrangement, find another way to do this? */
+     height: initial;
+     width: initial;
+     margin: initial;
+   }
+}
+  
+/* 40 * 16 = 640px, less than 640px */
+@media (max-width: 40rem) {
+  .grid {
+    /* make display:grid only use 1  column */
+    grid-template-columns: 1fr;
+  }
+  .cell {
+    /* fallback to 100% */
+    width: 100%;
+    /* flex whole screen if flex can be used */
+    flex: 1;
+    /* auto margins to center the content */
+    margin: 1rem auto 0 auto;
+  }
+  @supports (display: grid) {
+    .cell {
+      /* no margins needed when using grid, margins determined by grid-gap */
+      margin: 0;
+    }
+  }
+}
+ 

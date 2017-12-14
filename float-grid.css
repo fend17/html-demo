@@ -1,0 +1,49 @@
+body, html{
+  width: 100%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.wrapper{
+  margin: 2rem;
+  /* rgba is a rgba value + an opacity as the fourth value */
+  border: 2px solid rgba(100,100,100,0.1);
+  /* Curved corners */
+  border-radius: 10px;
+}
+
+.first-inner{
+  /*  Equal width inner boxes, nothing visual, just for grouping */
+  width: 50%;
+  float: left;
+}
+
+.second-inner{
+  width: 50%; 
+  float: right;
+}
+
+.box{
+  margin: 2rem;
+  width: 150px;
+  height: 150px;
+  background-color: lightcoral;
+  border-radius: 10px;
+}
+
+/* Align the inner boxes to the right in the right */
+.second-inner .box{
+  float: right;
+}
+
+/* Align the inner boxes to the right in the right */
+.first-inner .box{
+  float: left;
+}
+
+/* Prevent parent from collapsing */
+.clearfix{
+  clear:both;
+}

@@ -1,0 +1,44 @@
+body {
+  font-family: "Helvetica Neue", sans-serif;
+  margin: 0;
+  width: 100vw;
+  height: 100vh;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+section {
+  width: 20%;
+  margin: 0 auto;
+}
+
+/* Align ever label and input in one column */
+section,
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Put some spacing between the elements in the form */
+form > input {
+  margin: 0.5rem 0;
+}
+
+/* Attribute selector lets us select only
+ * specific input types. This way we can opt
+ * out of choosing the submit-button */
+input[type="text"]:valid,
+input[type="password"]:valid {
+  background-color: lightgreen;
+}
+
+input:invalid {
+  background-color: red;
+}
+
+/* When element is tabbed to and focused */
+input:focus {
+  outline: rgb(56, 129, 25) auto 5px;
+}

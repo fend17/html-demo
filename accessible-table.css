@@ -1,0 +1,32 @@
+body {
+  display: flex;
+  justify-content: center;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+table {
+  /* Collapse the borders, no spacing, default is 'separate' */
+  border-collapse: collapse;
+  /* if collapse is set to separate, you can use border-spacing */
+  border-spacing: 1rem;
+  border: 1px solid gray;
+}
+
+th {
+  /* default is center align headings */
+  text-align: left;
+}
+
+th,
+td {
+  border: 1px solid white;
+  padding: 1rem;
+  background-color: rgba(100, 100, 100, 0.3);
+}
+
+tr:nth-child(even) {
+  background-color: rgba(100, 100, 100, 0.1);
+}

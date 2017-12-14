@@ -1,0 +1,45 @@
+body{
+  font-family: sans-serif;
+}
+
+.button {
+  padding: 1rem 1.5rem;
+  border-radius: 6px;
+  border-color: transparent;
+  box-shadow: 0 0 8px rgba(0,0,0,0.1);
+}
+
+.button-primary:hover{
+  background-color: rgb(0, 190, 70);
+}
+
+.button-primary{
+  background-color: rgb(0, 210, 70);
+  color: rgb(255,255,255);
+  
+}
+
+.button-secondary{
+  background-color: rgb(210, 0, 70);
+  color: rgb(255,255,255);
+}
+
+.card {
+  max-width: 16rem;
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem;
+  box-shadow: 0 0 1rem rgba(0,0,0,0.2);
+  border-radius: 4px;
+}
+
+footer {
+  height: 5rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+section{
+  flex: 1;
+}

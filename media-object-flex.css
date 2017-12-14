@@ -1,0 +1,58 @@
+body{
+  /* Use default sans-serif font */
+  font-family: "Helvetica Neue", sans-serif;
+  color: #444;
+  margin: 0;
+  padding: 0;
+  width:100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+* {
+  /* Make the box model behave */
+  box-sizing: border-box;
+}
+
+img{
+  height: 50%;
+  width: auto;
+}
+
+.wrapper{
+  padding-top: 1rem;
+  display: flex;
+  flex: 1;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.card{
+  height: 150px;
+  flex: 0 0 200px;
+  background-color: white;
+  display: flex;
+  align-items: flex-start;
+}
+
+.card p {
+  margin: 0 0 0 1rem;
+}
+
+header{
+  height: 8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main{
+  background-color: lightcoral;
+  flex: 1;
+}
+
+footer{
+  height: 4rem;
+}
+

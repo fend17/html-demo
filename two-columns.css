@@ -1,0 +1,101 @@
+body{
+  /* Will use whatever font the system deems worthy */
+  font-family: sans-serif;
+  /* There is always a margin set on body by default */
+  margin: 0;
+  padding: 0;
+  /* Make the text breath, 16 * 1.5 = 24 */
+  line-height: 1.5;
+}
+
+/* center text in all heading */
+h1, h2, h3, h4, h5{
+  text-align: center;
+}
+
+/* 
+ * Makes the box model behave like padding and
+ * margin is a part of the outer bounding box.
+ * Not default in most browsers because CSS specification
+ * says so.
+ */ 
+* {
+  box-sizing: border-box;
+}
+
+header{
+  /* Ol' vertical align trick, set the line height
+  * to the height of the block-element and use vertical-align
+  * both properties must be present.
+  */
+  height: 200px;
+  line-height: 200px;
+  vertical-align: middle;
+  /* Fallback color in case image isn't working */
+  background-color: #444;
+  background-image: url("https://hdwallsource.com/img/2014/5/bokeh-photography-wallpaper-23982-24639-hd-wallpapers.jpg");
+  /* cover so it will take up the whole element */
+  background-size: cover;
+  /* center the image inside the element */
+  background-position: center;
+  color: #fff;
+}
+
+header h1{
+  margin: 0;
+  /* 
+   * Don't write caps or change the actual content in the html
+   * use css to transform the casing instead 
+   */
+  text-transform: uppercase;
+  /* 
+   * Space between letters in text, good to use when
+   * writing in uppercase, makes it more readable, 0.5rem = 8px
+   */
+  letter-spacing: 0.5rem;
+}
+
+.two-columns{
+  background-color: #fff;
+  padding: 1rem;
+  color: #444;
+}
+
+.full-width{
+  padding: 2rem 1rem;
+  background-color: #444;
+  color: #fff;
+}
+
+/*
+ * All articles inside two columns element will float left
+ */ 
+.two-columns article{
+  float: left;
+  /*
+   * If we use margins with a percentage that will translate to
+   * 50% + 1rem on each side of the element. This means the content
+   * will get pushed down because it can't fit. One fix to this is to
+   * calculate and remove the margins from the width with the function
+   * calc()  
+   */
+  width: calc(50% - 2rem);
+  margin: 1rem;
+  padding: 0 0 1rem 1rem;
+}
+
+footer{
+  background-color: #444;
+  color: #fff;
+  padding: 1rem;
+  height: 100px;
+  text-align: center;
+}
+
+/* Fix so parent element won't collapse when using floats.
+ * Only necessary when using floats and when all children
+ * are floated.
+ */
+.clearfix{
+  clear: both;
+}

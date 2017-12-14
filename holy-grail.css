@@ -1,0 +1,58 @@
+
+
+body{
+  font-family: "Helvetica Neue", sans-serif;
+  margin: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.header{
+  color: snow;
+  text-transform: uppercase;
+  letter-spacing: 0.5rem;
+  height: 15rem;
+  width: 100%;
+  background-color: thistle;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.wrapper{
+  flex: 1;
+  width: 100%;
+  background-color: green;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: stretch;
+}
+
+nav, aside {
+  flex: 0 0 12rem;
+  background-color: teal;
+}
+
+section {
+  flex: 1 0 15rem;
+  background-color: white;
+}
+
+footer{
+  height: 10rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+/* .child{
+  flex: 1 0 200px;
+  height: 150px;
+  margin: 1rem;
+  background-color: lightgoldenrodyellow;
+} */

@@ -1,0 +1,81 @@
+body{
+  height: 100vh;
+  margin: 0;
+  display: flex;
+  font: 100% / 2  "Helvetica Neue", sans-serif;
+  color: #444;
+}
+
+.container {
+ display: flex;  
+ flex-flow: column;
+ text-align: center;
+}
+
+/* All children should take equal amount of width */
+.container > * {
+ padding: 2rem;
+ flex: 1;
+}
+
+.header {
+  background: #454545;
+  color: white;
+}
+
+.footer {
+ background: lightgoldenrodyellow;
+}
+
+.main {
+ background: lightsalmon;
+}
+
+.desktop {
+  display: none;
+  background-color: lightgoldenrodyellow;
+}
+
+/* Make a div and position it top left absolute,
+ * make it off screen, hidden from view */
+.mobile {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  left: -20rem;
+  top: 0;
+  height: 50vh;
+  width: 10rem;
+  background: gold;
+}
+
+/* Position the checkbox toggle absolute top left */
+#mobile-toggle {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+
+/* When checkbox is checked, select the nearest nav
+ * child with +, move the nav from -20rem to 0 */
+#mobile-toggle:checked + nav {
+  left: 0;
+}
+
+/* Also move the checkbox to the right as well 
+ * when checked */
+#mobile-toggle:checked {
+  left: 15rem;
+}
+
+@media (min-width: 640px) {
+  /* Show the navbar on bigger screen */
+  .desktop {
+    display: block;
+  }
+  /* And hide both checkbox and the off-screen menu */
+  #mobile-toggle, .mobile {
+    display: none;
+  }
+}

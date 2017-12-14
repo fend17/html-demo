@@ -1,0 +1,55 @@
+body {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  font-size: 5em;
+  letter-spacing: .5rem;
+  text-transform: uppercase;
+  color: #2d2d2d;
+}
+
+
+@media (min-width: 600px){
+  body{
+    background-color: #FFCCBC;
+  }
+  h1 {
+    font-size: 2em;
+    color: #80D8FF;
+  }
+}
+
+@media (min-width: 700px) {
+  body{
+    background-color: #B2DFDB;
+  }
+  h1 {
+    color: #F06292;
+    font-size: 8em;
+  }
+}
+
+@media (min-width: 800px) {
+  body{
+    background-color: #A5D6A7;  
+  }
+  h1 {
+    color: #FFEE58;
+    font-size: 3em;
+  }
+}
+
+@media (min-width: 900px) {
+  body{
+    background-color: #FFCC80;
+  }
+  h1{
+    color: #00ACC1;
+    font-size: 6em;
+  }
+}

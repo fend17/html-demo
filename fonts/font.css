@@ -1,0 +1,17 @@
+@font-face {
+    font-family: 'seasideresortnfregular';
+    src: url('seaside_resort-webfont.woff2') format('woff2'),
+         url('seaside_resort-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'rieslingregular';
+    src: url('riesling-webfont.woff2') format('woff2'),
+         url('riesling-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}

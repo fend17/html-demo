@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!--  UTF-8 has been the dominant character encoding for the World Wide Web since 2009, 
+        and as of November 2017 accounts for 90.1% of all Web pages.-->
+  <meta charset="UTF-8">
+  <!-- Makes the page adapt to the width of the device, mobile, laptop etc. -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- IE / EDGE specific code, makes it behave better in IE -->
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!-- relation = stylesheet, interpret file as Cascading Style Sheet -->
+  <link rel="stylesheet" href="two-columns.css">
+  <title>Two columns layout</title>
+</head>
+
+<body>
+  <header>
+    <h1>Header</h1>
+  </header>
+  <section class="two-columns">
+    <h2>Two Columns</h2>
+    <article>
+      <h3>First column</h3>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A illum repellendus sapiente blanditiis placeat veniam minus
+        delectus sint provident. Nisi, maiores dignissimos. Voluptatem ipsa vitae explicabo sapiente illo reprehenderit.
+        Tempora!
+      </p>
+    </article>
+    <article>
+      <h3>Second Column</h3>
+      <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. A illum repellendus sapiente blanditiis placeat veniam minus
+        delectus sint provident. Nisi, maiores dignissimos. Voluptatem ipsa vitae explicabo sapiente illo reprehenderit.
+        Tempora! </p>
+    </article>
+    <!-- Prevent parent element from collapsing -->
+    <div class="clearfix"></div>
+  </section>
+  <section class="full-width">
+    <h2>Something inspirational</h2>
+    <blockquote>
+      <em>
+        "Every great developer you know got there by solving problems they were unqualified to solve until they actually did it.
+      </em>
+      <p>- Patrick McKenzie </p>
+    </blockquote>
+  </section>
+  <section class="two-columns">
+    <h2>Cases</h2>
+    <article>
+      <h3>First case</h3>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A illum repellendus sapiente blanditiis placeat veniam minus
+        delectus sint provident. Nisi, maiores dignissimos. Voluptatem ipsa vitae explicabo sapiente illo reprehenderit.
+        Tempora!
+      </p>
+    </article>
+    <article>
+      <h3>Second Case</h3>
+      <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. A illum repellendus sapiente blanditiis placeat veniam minus
+        delectus sint provident. Nisi, maiores dignissimos. Voluptatem ipsa vitae explicabo sapiente illo reprehenderit.
+        Tempora! </p>
+    </article>
+    <div class="clearfix"></div>
+  </section>
+  <footer>
+    <p>Copyright
+      <!-- Make screen readers interpret emoji as image -->
+      <span role="img">👺</span>
+    </p>
+  </footer>
+</body>
+</html>
