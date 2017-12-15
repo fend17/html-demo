@@ -1,0 +1,34 @@
+body {
+  margin: 3rem;
+}
+
+@media (max-width: 40rem) {
+  th {
+    /* Hide the headers, not the best solution, better
+     * would be to use absolute positioning and hide them
+     * offscreen but this will do for now. */
+    display: none;
+  }
+  td {
+    /* Force table cells to behave like block elements,
+     * not ideal for older browsers but yeee */
+    display: block;
+  }
+  /* With ::before we can grab any attribute that is set on the
+   * element with attr(). In this case we use the data-th-attribute
+   * that we created ourself. Set it before the element and display
+   * this content as inline-block to place it right before the cell */
+  td::before {
+    content: attr(data-th)": ";
+    display: inline-block;
+    font-weight: bold;
+  }
+  /* Just for styling between each row */
+  td:last-child {
+    padding-bottom: 1rem;
+    border-bottom: 2px solid black;
+  }
+  td:first-child {
+    padding-top: 1rem;
+  }
+}

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="responsive-table.css">
+  <title>Responsive Table</title>
+</head>
+<body>
+  <table>
+    <thead>
+      <tr>
+        <th>Country</th>
+        <th>Country Code</th>
+        <th>Continent</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <!-- We can create our own attributes with data-* 
+             we could for example have data-banana="banana" if we want,
+             this is so we can use ::before to display the value.-->
+        <td data-th="Country">Sweden</td>
+        <td data-th="Country Code">SWE</td>
+        <td data-th="Continent">Europe</td>
+      </tr>
+      <tr>
+        <td data-th="Country">USA</td>
+        <td data-th="Country Code">USA</td>
+        <td data-th="Continent">North America</td>
+      </tr>
+      <tr>
+        <td data-th="Country">Venezuela</td>
+        <td data-th="Country Code">VE</td>
+        <td data-th="Continent">South America</td>
+      </tr>
+    </tbody>
+  </table>
+</body>
+</html>
