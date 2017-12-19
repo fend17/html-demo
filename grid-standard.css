@@ -1,0 +1,24 @@
+* {
+  box-sizing: border-box;
+}
+
+body{
+  height: 100vh;
+  margin: 1rem;
+}
+
+section {
+  height: 80%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-gap: 1rem;
+  
+}
+
+div {
+  background-color: lightpink;
+  border-radius: 5px;
+  opacity: .7;
+  border: 1px solid #444;
+}

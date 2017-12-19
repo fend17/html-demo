@@ -1,0 +1,77 @@
+body {
+  /* ugly margins */
+  margin: 0;
+}
+
+/* please box, behave */
+* {
+  box-sizing:border-box;
+}
+
+.container {
+  /* We need a width and height on the parent */
+  height: 100vh;
+  width: 100vw;
+  display: grid;
+  grid-gap: 1rem;
+  /* three equal columns */
+  grid-template-columns: 1fr 1fr 1fr;
+  /* three equal rows */
+  grid-template-rows: 1fr 1fr 1fr;
+}
+
+.cell {
+  background-color: #649;
+  border: 1px solid red;
+  border-radius: 5px;
+  /* Opacity so we can se the overlay */
+  opacity: .5;
+  font-size: 200%;
+  color: white;
+  padding: 2rem;
+}
+
+/** 
+ * Both the first item and the second item
+ * are positioned at the same grid guides
+ * basically position absoluting them, except
+ * this is with grid so it still follows the
+ * flow of the page
+ */
+.cell:nth-child(1){
+  /* start at first line, go to third */
+  grid-row: 1 / 3;
+  grid-column: 1 / 3;
+}
+
+.cell:nth-child(2){
+  /* start at first line, go to third */
+  grid-column: 1 / 3;
+  grid-row: 1 / 3;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

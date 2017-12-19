@@ -1,9 +1,31 @@
+@font-face {
+    font-family: 'Seaside';
+    src: url('fonts/seaside_resort-webfont.woff2') format('woff2'),
+         url('fonts/seaside_resort-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    /* swap to this font when available */
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Riesling';
+    src: url('fonts/riesling-webfont.woff2') format('woff2'),
+         url('fonts/riesling-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    /* swap to this font when available */
+    font-display: swap;
+}
+
+
 body{
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
   width: 100vw;
+  font-size: 150%;
 }
 
 *{
@@ -26,9 +48,9 @@ body{
   margin-top: -2.5rem;
   background-color: burlywood;
   text-align: center; 
-  font-family: 'seasideresortnfregular', sans-serif;
+  font-family: 'Seaside', sans-serif;
 }
 
 p {
-  font-family: 'rieslingregular', sans-serif;
+  font-family: 'Riesling', sans-serif;
 }
